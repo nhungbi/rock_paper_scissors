@@ -1,4 +1,4 @@
-# Rock Scissors Paper
+# Rock Paper Scissors
 
 We are going to create a simple applicaton that allows users to play quick games of [Rock, Scissors, Paper](https://en.wikipedia.org/wiki/Rock%E2%80%93paper%E2%80%93scissors). Our schema for this one will be fairly simple. A User can have many Games, and a Game belongs to a User. 
 
