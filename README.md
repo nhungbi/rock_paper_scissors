@@ -1,37 +1,34 @@
 # Rock Paper Scissors
 
-We are going to create a simple applicaton that allows users to play quick games of [Rock, Scissors, Paper](https://en.wikipedia.org/wiki/Rock%E2%80%93paper%E2%80%93scissors). Our schema for this one will be fairly simple. A User can have many Games, and a Game belongs to a User. 
+For this project, you'll be asked to create a full-stack "Rock-Paper-Scissors" application using Django + React. This will implement the classic
+[Rock, Paper, Scissors](https://en.wikipedia.org/wiki/Rock%E2%80%93paper%E2%80%93scissors) game against an AI opponent.
 
-## Release -1: (Stretch goal) Authentication, Multiplayer
 
-Authentication is easier done in the beginning.
+## Release 1: Django Back-End
 
-We authenticated before using full-stack Django, but using separate front-ends and back-ends communicating through an API becomes a much lengthier process. [This tutorial](https://medium.com/@dakota.lillie/django-react-jwt-authentication-5015ee00ef9a) may help you.
+Your data model design should allow for the following features:
+- A User should be able to play many games
+- A Game should last to a certain configurable number of "Throws" won (e.g. first to 3 victories)
+- A Throw can be "rock", "paper" or "scissors"
 
-Keep in mind, multi-player rock paper scissors shouldn't follow what we've written below for single-player, so feel free to make your own design choices. Luckily, this isn't the most complicated game; keep it simple, you can do it!
+## Release 2: React Front-End
 
-## Release 0: Setup 
-- Create a `venv` and install Django. 
-- Start a new Django project `django-admin startproject rock_scissors_paper`. 
-- Setup your postgresql database using `psycopg2`. 
-- Create an app for our game `py manage.py startapp game`
+Your front-end site should encorporate the following pages:
+- Home Page:
+  - Ability to configure and start a new game
+- Game Page:
+  - Ability to play an AI player in the configured game. The AI should randomly choose thier throw value. 
+  - Ability for the user to throw out "rock", "paper", or "scissors"
+  - Current game score (throws won total, target game throws, etc...) 
 
-## Release 1: Models
-We'll handle the game logic on the front end, so all our backend will have to do is save completed Games. Your Game model should: 
-- Belong to a user. 
-- Have a win status. (Won or Lost). This can be a string or a bool. What makes more sense? 
-- User Throw - a string with what the user played, either rock, scissors, or paper. 
-- Computer Throw 
+## Release 3: User Authentication
 
-## Release 2: User Profile
-Use `create-react-app` to create a new front end for our rock, scissors, paper game. The main page should have the following: 
-- Their username 
-- The number of games they've won so far
-- The number of games they've lost so far 
-- A button/link to play a new game. 
+Once you have the main features implemented for this project, try to proceed with adding in user authentication functionality. This would include sign-up and login/logout pages on your front-end, and authentication logic in your back-end.
 
-## Release 3: Game Logic 
-When a user clicks the link to play a new game, it takes them to a new game page. The user can select a throw (rock, scissors, or paper). After that the computer should randomly select its own throw. You'll have to write some game logic to determine the winner. You'll then need to send the new game info to your back end to save the game. 
-- Rock beats scissors
-- Paper beats rock
-- Scissors beats paper
+## Release 4: Game History and Scoreboard
+
+Add a couple more pages and features:
+- Game History Page:
+  - Ability to see the logged-in user's game history on the site
+- Leaderboard Page:
+  - Ability to see the scores/stats of ALL site users' games (i.e. usernames, total games W/L, total throws W/L)
