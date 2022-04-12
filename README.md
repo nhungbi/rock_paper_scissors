@@ -17,7 +17,7 @@ Your front-end site should encorporate the following pages:
 - Home Page:
   - Ability to configure and start a new game
 - Game Page:
-  - Ability to play an AI player in the configured game. The AI should randomly choose thier throw value. 
+  - Ability to play an AI player in the configured game. The AI should randomly choose their throw value. 
   - Ability for the user to throw out "rock", "paper", or "scissors"
   - Current game score (throws won total, target game throws, etc...) 
 
